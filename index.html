@@ -27,15 +27,13 @@
                 <h2>Majorca</h2>
                     <p>Imagine an island with turquoise blue waters, secret coves, soft golden sands, lush green foliage, rugged mountains, picturesque villages and a vibrant capital city. The island and its capital, Palma, are overflowing with character, while its beaches are famous all around the world, making it one of the most sought-after summer destinations.</p>
 
-                    <picture>
-                        <!-- Smaller image for small screens -->
-                        <source srcset="images/majorca-beach-S.png" media="(max-width: 480px)" width="320">
-                        <!-- Medium-sized image for tablets -->
-                        <source srcset="images/majorca-beach-M.png" media="(max-width: 800px)" width="780">
-                        <!-- Large image for desktops -->
-                        <source srcset="images/majorca-beach-L.png" media="(min-width: 801px)" width="1024">
-                        
-                    </picture>
+                   <picture>
+                        <source media="(min-width: 1024px)" srcset="images/majorca-beach-L.png"/>
+                        <source media="(min-width: 780px)" srcset="images/majorca-beach-M.png"/>
+                        <source media="(max-width: 320px)" srcset="images/majorca-beach-S"/>
+                        <img src="images/majorca-beach-S.png" alt="majorca-beach"/>
+                   </picture>
+                  
             </section>
 
             <section>
@@ -107,34 +105,45 @@
                     <p>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</p> 
                         <h3>Miranda Blake</h3>
                             <picture>
-                                <!-- Smaller image for small screens -->
-                                <source srcset="images/miranda-blake-S.png" media="(max-width: 480px)" width="320">
-                                <!-- Medium-sized image for tablets -->
-                                <source srcset="images/miranda-blake-M.png" media="(max-width: 800px)" width="780">
-                                <!-- Large image for desktops -->
-                                <source srcset="images/miranda-blake-L.png" media="(min-width: 801px)" width="1024">
-                                <!-- Default fallback image -->
-                                
-                            </picture>
-                                <small>Traveling From: London, England</small>
+                                <source media="(min-width: 1024px)" srcset="images/miranda-blake-L.png"/>
+                                <source media="(min-width: 780px)" srcset="images/miranda-blake-M.png"/>
+                                <source media="(max-width: 320px)" srcset="images/miranda-blake-S.png"/>
+                                <img src="images/miranda-blake-S.png" alt=""/>
+                             </picture>
+                                <p>Traveling From: London, England</p>
                                     <p>“I traveled here for business, but my stay was extended. Now it is my home.”</p>
                                         <p>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</p> 
 
                         <h3>Max Winter</h3>
-                            max-winter.png
-                                <small>Traveling From: Berlin, Germany</small>
+                            <picture>
+                                <source media="(min-width: 1024px)" srcset="images/max-winter-L.png"/>
+                                <source media="(min-width: 780px)" srcset="images/max-winter-M.png"/>
+                                <source media="(max-width: 320px)" srcset="images/max-winter-S.png"/>
+                                <img src="images/max-winter-S.png" alt=""/>
+                            </picture>
+                                <p>Traveling From: Berlin, Germany</p>
                                     <p>“Great escape from my reality. Beautiful sunsets, wonderful people, great beer. ”</p>
                                         <p>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</p> 
 
                         <h3>Inés Villegoes</h3>
-                            ines-villegoes.png
-                                <small>Traveling From: Barcelona, Spain</small>
+                            <picture>
+                                <source media="(min-width: 1024px)" srcset="images/ines-villegoes-L.png"/>
+                                <source media="(min-width: 780px)" srcset="images/ines-villegoes-M.png"/>
+                                <source media="(max-width: 320px)" srcset="images/ines-villegoes-S.png"/>
+                                <img src="images/ines-villegoes-S.png" alt=""/>
+                             </picture>
+                                <p>Traveling From: Barcelona, Spain</p>
                                     <p>“A very safe environment for all travelers.”</p>
                                         <p> - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</p>
 
                         <h3>Carmen Lorenzo</h3>
-                            carmen-lorenzo.png
-                                <small>Traveling From: Madrid, Spain</small>
+                            <picture>
+                                <source media="(min-width: 1024px)" srcset="images/carmen-lorenzo-L.png"/>
+                                <source media="(min-width: 780px)" srcset="images/carmen-lorenzo-M.png"/>
+                                <source media="(max-width: 320px)" srcset="images/carmen-lorenzo-S.png"/>
+                                <img src="images/carmen-lorenzo-S.png" alt=""/>
+                            </picture>
+                                <p>Traveling From: Madrid, Spain</p>
                                     <p>“Live, laugh, love-- everything you need in Majorca.”</p>
                                         <p>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</p>
             </section>
@@ -192,9 +201,10 @@
                 <h3>Contact Us</h3>
                 <form action="https://wp.zybooks.com/form-viewer.php" method="POST">
                     <label for="fname">First Name<span class="required">*</span></label>
-                    <input type="text" name="fname" id="fname" value="Enter first name" required>
+                    <input type="text" name="fname" id="fname" placeholder="Enter first name" id="fname" required>
+                    
                     <label for="lname">Last Name<span class="required">*</span></label>
-                    <input type="text" name="lname" id="lname" value="Enter last name" required>
+                    <input type="text" name="lname" id="lname" placeholder="Enter last name" required>
 
                     <fieldset>
                         <legend>Preferred Contact Method</legend>
@@ -207,9 +217,9 @@
                     </fieldset>
 
                     <label for="email">Email<span class="required">*</span></label>
-                    <input type="text" name="email" id="email" value="Enter email" required>
+                    <input type="text" name="email" id="email" placeholder="Enter email" required>
                     <label for="phone">Phone<span class="required">*</span></label>
-                    <input type="text" name="phone" id="phone" value="Enter telephone number" required>
+                    <input type="text" name="phone" id="phone" placeholder="Enter telephone number" required>
 
                     <label for="destination">Destination<span class="required">*</span></label>
                     <div id="arrow">
