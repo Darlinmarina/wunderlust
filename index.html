@@ -27,14 +27,15 @@
                 <h2>Majorca</h2>
                     <p>Imagine an island with turquoise blue waters, secret coves, soft golden sands, lush green foliage, rugged mountains, picturesque villages and a vibrant capital city. The island and its capital, Palma, are overflowing with character, while its beaches are famous all around the world, making it one of the most sought-after summer destinations.</p>
 
-                 
-                        <img 
-                        src="images/majorca-beach-S.png" 
-                        srcset="images/majorca-beach-S.png 320w, images/majorca-beach-M.png 780w, images/majorca-beach-L.jpg 1024w"
-                        sizes="(max-width: 480px) 320px, (max-width: 800px) 780px, 1024px"
-                        alt="Responsive Example">
-                    
-
+                    <picture>
+                        <!-- Smaller image for small screens -->
+                        <source srcset="images/majorca-beach-S.png" media="(max-width: 480px)" width="320">
+                        <!-- Medium-sized image for tablets -->
+                        <source srcset="images/majorca-beach-M.png" media="(max-width: 800px)" width="780">
+                        <!-- Large image for desktops -->
+                        <source srcset="images/majorca-beach-L.png" media="(min-width: 801px)" width="1024">
+                        
+                    </picture>
             </section>
 
             <section>
@@ -105,10 +106,19 @@
                 <h2>Testimonials</h2>
                     <p>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</p> 
                         <h3>Miranda Blake</h3>
-                            miranda-blake.png
-                            <small>Traveling From: London, England</small>
-                                <p>“I traveled here for business, but my stay was extended. Now it is my home.”</p>
-                                    <p>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</p> 
+                            <picture>
+                                <!-- Smaller image for small screens -->
+                                <source srcset="images/miranda-blake-S.png" media="(max-width: 480px)" width="320">
+                                <!-- Medium-sized image for tablets -->
+                                <source srcset="images/miranda-blake-M.png" media="(max-width: 800px)" width="780">
+                                <!-- Large image for desktops -->
+                                <source srcset="images/miranda-blake-L.png" media="(min-width: 801px)" width="1024">
+                                <!-- Default fallback image -->
+                                
+                            </picture>
+                                <small>Traveling From: London, England</small>
+                                    <p>“I traveled here for business, but my stay was extended. Now it is my home.”</p>
+                                        <p>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</p> 
 
                         <h3>Max Winter</h3>
                             max-winter.png
