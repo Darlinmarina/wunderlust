@@ -47,52 +47,47 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+/* reset end */
 
 /* General Styles */
 body {
     font-family: 'Montserrat', sans-serif;
-    margin: 0;
-    padding: 0;
 }
 
-/* Header */
+h1, h2, h3{
+    font-family: 'Molle', cursive;
+}
+
+h4{
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+q{
+    font-style: italic;
+}
+
+
 header {
-    background: linear-gradient(to bottom, #8ed0f9, #ffffff);
     display: flex;
     align-items: center;
-    padding: 10px 20px;
     justify-content: space-between;
+    padding: 1rem;
+    background-color: #0a9396;
+    
 }
 
-/* Logo */
 #logo img {
-    height: 60px;
+    height: 50px;
 }
-
-/* Header Text */
-header h1 {
-    font-size: 2rem;
-    margin: 0;
-}
-
-header p {
-    font-size: 1rem;
-    margin: 0;
-}
-
-/* Navigation */
-
 
 nav ul {
     list-style: none;
-    margin: 0;
-    padding: 0;
     display: flex;
-    gap: 10px;
 }
 
 nav ul li {
-    display: inline;
+    margin: 0 1rem;
 }
 
 nav ul li a {
@@ -101,8 +96,7 @@ nav ul li a {
     padding: 10px 15px;
     color: black;
     background: white;
-    border-top: 4px solid transparent;
-    transition: 0.3s;
+    
 }
 
 nav ul li.active a {
@@ -110,8 +104,89 @@ nav ul li.active a {
     border-top: 4px solid gold;
 }
 
+
 nav ul li a:hover {
     background: lightgray;
     border-top: 4px solid gray;
 }
+
+
+#intro {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 2rem;
+}
+
+#img-grid {
+    display: grid;
+   
+}
+
+#plan section{
+    background: teal;
+    outline: 2px solid white;
+    border-radius: 3px;
+}
+
+#plan div{
+    display: flex;
+    justify-content: center;
+    background-color: gold;
+}
+
+
+#testimonials div{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    
+}
+
+
+#about div {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    
+}
+
+section {
+    padding: 1rem;
+    margin: 1rem;
+}
+
+form {
+    display: flex;
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+input, select {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+footer {
+    padding: 1rem;
+    background: #0a9396;
+    color: white;
+}
+
+/* Screen Reader Only Class */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+    white-space: nowrap;
+}
+
+
+
+
 
