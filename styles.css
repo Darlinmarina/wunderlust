@@ -69,9 +69,9 @@ q{
 
 
 header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    
     padding: 1rem;
     background: linear-gradient(to bottom, #55BCD5, #ffffff);
     
@@ -110,16 +110,26 @@ nav ul li a:hover {
     border-top: 4px solid gray;
 }
 
-
-#intro {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 2rem;
+#intro div{
+    padding: 10px;
 }
 
 #img-grid {
     display: grid;
-   
+    grid-template-columns: repeat(2, 1fr);
+    
+}
+
+@media (max-width: 768px) {
+    #intro div {
+      grid-template-columns: repeat(2, 1fr); /* 2 columns on tablet view */
+    }
+}
+  
+@media (max-width: 480px) {
+    #intro div {
+        grid-template-columns: 1fr; /* 1 column on mobile view */
+    }
 }
 
 #plan {
@@ -307,26 +317,32 @@ form label {
     padding-right: 4px;
     padding-top: 8px;
     padding-bottom: 8px;
-    width: 100%;
+    border: 2px solid #9B26B0;;
+    
 }
+
 
 #contact select {
     margin-bottom: 15px;
     width: 100%;
     padding: 0.5rem;
-    border: 2px solid purple;
+    border: 2px solid #9B26B0;
     border-radius: 5px;
 }
 
 #mySubmit{
     text-decoration: none;
-    background-color: purple;
+    background-color: #9B26B0;
+    color: white;
     border: none;
-    padding: 15px 30px;
+    width: 50%; 
 }
 
 footer {
     padding: 1rem;
     background: rgb(241, 239, 239);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
 }
+
 
