@@ -49,13 +49,13 @@ table {
 }
 /* reset end */
 
-/* General Styles */
+
 body {
     font-family: 'Montserrat', sans-serif;
 }
 
 h1, h2, h3{
-    font-family: 'Molle', cursive;
+    font-family: 'Molle';
 }
 
 h4{
@@ -73,7 +73,7 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 1rem;
-    background-color: #0a9396;
+    background: linear-gradient(to bottom, #55BCD5, #ffffff);
     
 }
 
@@ -100,8 +100,8 @@ nav ul li a {
 }
 
 nav ul li.active a {
-    background: gold;
-    border-top: 4px solid gold;
+    background: #F6D64A;
+    border-top: 4px solid #F6D64A;
 }
 
 
@@ -122,71 +122,211 @@ nav ul li a:hover {
    
 }
 
+#plan {
+    background-color: #F6D64A;
+    padding: 64px;
+}
+
 #plan section{
-    background: teal;
+    background: #55BCD5;
     outline: 2px solid white;
     border-radius: 3px;
+    text-align: center;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+#plan h3 {
+    margin-left: 20px;
+}
+
+#plan h4 {
+    margin-bottom: 8px;
+}
+
+#plan img {
+        width: 120px;
+        height: 120px;
 }
 
 #plan div{
-    display: flex;
-    justify-content: center;
-    background-color: gold;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: 1200px;
 }
 
+@media (max-width: 768px) {
+    #plan div {
+      grid-template-columns: repeat(2, 1fr); /* 2 columns on tablet view */
+    }
+  }
+  
+@media (max-width: 480px) {
+    #plan div {
+        grid-template-columns: 1fr; /* 1 column on mobile view */
+    }
+}
+
+#testimonials {
+    padding-left: 64px;
+    padding-right: 64px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
+#testimonials section{
+    text-align: center;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+#testimonials h3 {
+    margin-left: 20px;
+}
+
+#testimonials h4 {
+    margin-top: 8px;
+}
+
+#testimonials img {
+        max-width: 120px;
+}
 
 #testimonials div{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: 1200px;
 }
 
-
-#about div {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    
+@media (max-width: 768px) {
+    #testimonials div {
+      grid-template-columns: repeat(2, 1fr); /* 2 columns on tablet view */
+    }
+  }
+  
+@media (max-width: 480px) {
+    #testimonials div {
+        grid-template-columns: 1fr; /* 1 column on mobile view */
+    }
 }
+
+#about {
+    background-color: #499BD2;
+    padding: 64px;
+}
+
+#about section{
+    text-align: center;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+#about h3 {
+    margin-left: 20px;
+}
+
+#about h4 {
+    margin-top: 8px;
+}
+
+#about img {
+        width: 100px;
+        height: 100px;
+}
+
+#about div{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: 800px;
+}
+
+@media (max-width: 768px) {
+    #about div {
+      grid-template-columns: repeat(2, 1fr); /* 2 columns on tablet view */
+    }
+}
+  
+@media (max-width: 480px) {
+    #about div {
+        grid-template-columns: 1fr; /* 1 column on mobile view */
+    }
+}
+
 
 section {
-    padding: 1rem;
-    margin: 1rem;
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+#contact {
+    padding-left: 64px;
+    padding-right: 64px;
+    padding-top: 32px;
+    padding-bottom: 32px;
 }
 
 form {
-    display: flex;
-    padding: 2rem;
-    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
 }
 
-input, select {
+@media (max-width: 768px) {
+    #form {
+      grid-template-columns: 1fr;
+    }
+}
+
+fieldset {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+form label {
+    margin-bottom: 4px;
+    display: block;
+}
+ 
+#contact h3 {
+    margin-bottom: 15px;
+}
+
+#contact input {
+    margin-bottom: 15px;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    width: 100%;
+}
+
+#contact select {
+    margin-bottom: 15px;
     width: 100%;
     padding: 0.5rem;
-    border: 1px solid #ccc;
+    border: 2px solid purple;
     border-radius: 5px;
+}
+
+#mySubmit{
+    text-decoration: none;
+    background-color: purple;
+    border: none;
+    padding: 15px 30px;
 }
 
 footer {
     padding: 1rem;
-    background: #0a9396;
-    color: white;
+    background: rgb(241, 239, 239);
 }
-
-/* Screen Reader Only Class */
-.sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    border: 0;
-    white-space: nowrap;
-}
-
-
-
-
 
