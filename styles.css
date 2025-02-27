@@ -49,6 +49,16 @@ table {
 }
 /* reset end */
 
+:root{
+    --yellow: #F6D64A;
+    --teal: #55BCD5;
+    --purple: #9B26B0;
+    --blu3: #499BD2;
+    --darkGrey: #222222;
+    --lightGrey: #EAEAEA;
+    --white: #FFFFFF;
+}
+
 
 body {
     font-family: 'Montserrat', sans-serif;
@@ -66,7 +76,6 @@ h4{
 q{
     font-style: italic;
 }
-
 
 header {
     display: grid;
@@ -110,25 +119,35 @@ nav ul li a:hover {
     border-top: 4px solid gray;
 }
 
-#intro div{
-    padding: 10px;
+#intro {
+    display: flex;
+    align-items: flex-start;
+    padding: 64px;
+    gap: 24px;
 }
 
-#img-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    
+#intro > h2,
+#intro > p {
+    flex: 1;
+}
+
+#intro > h2 {
+    flex-basis: 100%;
+}
+
+#intro > p {
+    flex-basis: 100%;
+}
+
+
+#intro h2{
+    font-size: 25px;
+    padding-bottom: 10px;
 }
 
 @media (max-width: 768px) {
-    #intro div {
-      grid-template-columns: repeat(2, 1fr); /* 2 columns on tablet view */
-    }
-}
-  
-@media (max-width: 480px) {
-    #intro div {
-        grid-template-columns: 1fr; /* 1 column on mobile view */
+    #intro {
+        flex-direction: column; /* 1 column on mobile view */
     }
 }
 
