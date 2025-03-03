@@ -337,7 +337,6 @@ form label {
     padding-top: 8px;
     padding-bottom: 8px;
     border: 2px solid #9B26B0;;
-    
 }
 
 
@@ -358,31 +357,20 @@ form label {
 }
 
 
-
-/* Custom radio button style without hiding the default radio */
 .radio-input input[type="radio"] {
     appearance: none;
     width: 20px;
     height: 20px;
-    border: 2px solid white; /* White border */
+    border: 2px solid white;
     border-radius: 50%;
     display: inline-block;
     position: relative;
-    
 }
 
-/* When radio is checked, change to purple */
+
 .radio-input input[type="radio"]:checked {
     background-color: purple;
 }
-
-
-
-
-
-
-
-
 
 
 footer {
